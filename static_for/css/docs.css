@@ -1,0 +1,18 @@
+.navbar-lab li{
+padding-left:15px;
+}
+
+.t_table{
+    padding: 8px 16px!important;
+}
+
+.w3-white, .w3-hover-white:hover {
+    color: #000!important;
+    background-color: #fff!important;
+}
+.w3-table, .w3-table-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
