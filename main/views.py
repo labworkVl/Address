@@ -11,7 +11,6 @@ from rest_framework import generics
 
 from rest_framework.views import APIView
 from main import apiView
-# Create your views here.
 from main.models import *
 from main.serializers import StreetSerializer, XstreetSerializer
 from ttmmpp.MsAccessDb import MsAccessConnector
