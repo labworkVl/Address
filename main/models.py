@@ -11,9 +11,9 @@ class DT(models.Model):
         abstract = True
 
 
-class MyManager(models.Model):
-    def get_queryset(self):
-        return super(MyManager, self).get_queryset().filter(name='sta')
+#class MyManager(models.Model):
+        #    def get_queryset(self):
+    #return super(MyManager, self).get_queryset().filter(name='sta')
 
 
 class Street(models.Model):
@@ -46,3 +46,13 @@ class Dom(models.Model):
         verbose_name_plural = 'doma'
 
 
+class Kw(models.Model):
+    name = models.CharField(max_length=10)
+    num = models.IntegerField()
+    buk = models.CharField(max_length=5)
+    prim = models.CharField(max_length=100)
+    kw_dom = models.ForeignKey(Dom)
+
+    class Meta:
+        ordering = ['num', 'buk']
+        verbose_name_plural = 'kws'
