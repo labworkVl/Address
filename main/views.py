@@ -20,20 +20,21 @@ from django.forms.models import model_to_dict
 from main import serializers
 
 def read_otsaldk():
-    kk = MsAccessConnector.exec_q('select * from adresa')
-    for k in kk:
-        yield k
+    pass
+    #kk = MsAccessConnector.exec_q('select * from adresa')
+    #for k in kk:
+#    yield k
 
 
 xstr = lambda s: '' if s is None else s
 
 
 def index(request):
-    for d in read_otsaldk():
-        if d[0] is not None:
-            obj, created = Street.objects.get_or_create(name=str(d[0]))
-            dobj, dcreated = Dom.objects.get_or_create(dom_street=obj, name="%s%s" % (int(d[1]), xstr(d[2])), num=int(d[1]), buk=xstr(d[2]))
-            print("street - %s  --- dom - %s%s" % (d[0], d[1], xstr(d[2])))
+    #for d in read_otsaldk():
+    #    if d[0] is not None:
+    #        obj, created = Street.objects.get_or_create(name=str(d[0]))
+    #        dobj, dcreated = Dom.objects.get_or_create(dom_street=obj, name="%s%s" % (int(d[1]), xstr(d[2])), num=int(d[1]), buk=xstr(d[2]))
+    #        print("street - %s  --- dom - %s%s" % (d[0], d[1], xstr(d[2])))
     return render_to_response('index.html', {})
 
 

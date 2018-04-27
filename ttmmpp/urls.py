@@ -1,4 +1,6 @@
+import Options
 from main import views, apiView
+from Options import views as oviews
 from django.conf.urls import include
 from main.models import *
 """ttmmpp URL Configuration
@@ -38,7 +40,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
-
+    url(r'^options/', oviews.index, name='options'),
 
     #url(r'^streets/$', views.streets_list),
     #url(r'^streets_all/$', views.streets_all),

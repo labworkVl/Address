@@ -44,6 +44,7 @@ body {
 .input-group{padding-bottom: 10px;}
 .al{width:40px;}
 #vipiska{display:none;}
+#zagr, #dop{height: 200px;}
 
 @media print {
 #fio, .main, .content, #myModal, #adres, .modal-dialog{display: none}
@@ -54,4 +55,6 @@ display:flex;
 }
 .breadcrumb a{cursor: pointer;!important}
 #vipi{display: none}
+
+
 }

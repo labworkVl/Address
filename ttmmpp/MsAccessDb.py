@@ -19,17 +19,18 @@ class MsAccessConnector(object):
 
     @classmethod
     def exec_q(cls, q_text):
-        conn = cls.get_connection()
-        try:
-            cursor = conn.cursor()
-        except:
-            conn = cls.get_connection(New=True)
-            cursor = conn.cursor()
-        cursor.execute(q_text)
-        rez = cursor.fetchall()
-        conn.commit()
-        cursor.close()
-        return rez
+        pass
+        #conn = cls.get_connection()
+        #try:
+        #   cursor = conn.cursor()
+            #except:
+        #   conn = cls.get_connection(New=True)
+        #    cursor = conn.cursor()
+            #cursor.execute(q_text)
+            #rez = cursor.fetchall()
+            #conn.commit()
+        #cursor.close()
+            #return rez
 
 
 
